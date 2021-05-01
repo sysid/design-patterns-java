@@ -1,5 +1,8 @@
 package refactoring_guru.bridge.example.devices;
 
+/**
+ * abstract Implementor
+ */
 public interface Device {
     boolean isEnabled();
 
