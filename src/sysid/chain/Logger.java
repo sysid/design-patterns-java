@@ -19,11 +19,16 @@ public interface Logger {
 
     // Handler: set next handler in chain
     default Logger appendNext(Logger nextLogger) {
-        return (msg, severity) -> {
+        return (String msg, LogLevel severity) -> {
             message(msg, severity);
             nextLogger.message(msg, severity);
         };
     }
+
+    static Logger xxx() {
+        return ((msg, severity) -> System.out.println("xxx"));
+    }
+
 
     static Logger writeLogger(LogLevel[] levels, Consumer<String> stringConsumer) {
         EnumSet<LogLevel> set = EnumSet.copyOf(Arrays.asList(levels));
