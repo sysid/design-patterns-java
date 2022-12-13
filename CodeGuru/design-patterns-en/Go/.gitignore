@@ -20,4 +20,4 @@ singleton/syncOnce/syncOnce
 state/state
 strategy/strategy
 template/template
-visitor/visitor
+visitor/visitor.envrc
