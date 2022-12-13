@@ -27,4 +27,4 @@ fastlane/report.xml
 
 Pods/
 
-.idea
+.idea.envrc
